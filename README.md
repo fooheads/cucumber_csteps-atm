@@ -12,9 +12,14 @@ Install cucumber_csteps and its dependencies:
 
     $ bundle install
 
-Compile and run the specs:
+Compile and run the specs (OS X):
 
     $ make features
+
+On Linux you might need to set the LD_LIBRARY_PATH:
+
+    $ LD_LIBRARY_PATH=. make features
+
 
 ## License
 
