@@ -11,7 +11,7 @@ atm: atm.c $(DEPS)
 	$(CC) $(CFLAGS) $^ -shared -o $(LIB)
 
 step_definitions: atm.c $(DEPS) $(STEP_DEFINITIONS)
-	$(CC) $(CFLAGS) -I. -I$(CSTEPS_INCLUDE_PATH) $^ -shared -o $(LIB)
+	$(CC) $(CFLAGS) -I. -I$(CSTEPS_INCLUDE_PATH) $^ -fPIC -shared -o $(LIB)
 
 features: step_definitions
 	cucumber
